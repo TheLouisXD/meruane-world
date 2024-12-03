@@ -1,0 +1,51 @@
+[gd_scene load_steps=4 format=3 uid="uid://dm7llqpf0tqvi"]
+
+[ext_resource type="Script" path="res://scripts/main_menu.gd" id="1_ay2vv"]
+[ext_resource type="Texture2D" uid="uid://cqeasmhl8jo62" path="res://assets/basura/photo-1478098711619-5ab0b478d6e6.jpg" id="1_spfyp"]
+[ext_resource type="Texture2D" uid="uid://c1kv3kr0mtpyy" path="res://assets/world/props/cooltext471087854192457.png" id="2_x11bo"]
+
+[node name="MainMenu" type="Node"]
+script = ExtResource("1_ay2vv")
+
+[node name="gato" type="TextureRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_spfyp")
+expand_mode = 1
+
+[node name="titulo" type="TextureRect" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -478.5
+offset_top = -39.5
+offset_right = 478.5
+offset_bottom = 39.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_x11bo")
+expand_mode = 1
+
+[node name="nivel1" type="Button" parent="."]
+offset_left = 197.0
+offset_top = 464.0
+offset_right = 457.0
+offset_bottom = 532.0
+theme_override_font_sizes/font_size = 30
+text = "Nivel 1"
+
+[node name="nivel2" type="Button" parent="."]
+offset_left = 671.0
+offset_top = 464.0
+offset_right = 931.0
+offset_bottom = 532.0
+theme_override_font_sizes/font_size = 30
+text = "Nivel 2"
+
+[connection signal="pressed" from="nivel1" to="." method="_on_nivel_1_pressed"]
+[connection signal="pressed" from="nivel2" to="." method="_on_nivel_2_pressed"]
