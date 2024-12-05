@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=4 uid="uid://dnfrbfjybvr3t"]
+[gd_scene load_steps=30 format=4 uid="uid://dnfrbfjybvr3t"]
 
 [ext_resource type="Script" path="res://scripts/main.gd" id="1_c3yu7"]
 [ext_resource type="Script" path="res://scripts/game_manager.gd" id="2_v7v1t"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://4m68ackvql0e" path="res://scenes/prefabs/trofeo.tscn" id="7_mr1em"]
 [ext_resource type="PackedScene" uid="uid://dm7llqpf0tqvi" path="res://scenes/main_menu.tscn" id="8_7idue"]
 [ext_resource type="PackedScene" uid="uid://hlbk7nyxjesd" path="res://scenes/prefabs/moneda.tscn" id="8_pu2ng"]
+[ext_resource type="PackedScene" uid="uid://cqotvyxtwgx65" path="res://scenes/prefabs/ui.tscn" id="10_wi5j0"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0s0el"]
 texture = ExtResource("4_uwxrs")
@@ -437,27 +438,6 @@ position_smoothing_speed = 7.0
 position = Vector2(3154, 580)
 target_level = ExtResource("8_7idue")
 
-[node name="UI" type="CanvasLayer" parent="."]
-
-[node name="Panel" type="Panel" parent="UI"]
-offset_left = 19.0
-offset_top = 18.0
-offset_right = 242.0
-offset_bottom = 89.0
-
-[node name="PointsLabel" type="Label" parent="UI/Panel"]
-unique_name_in_owner = true
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_font_sizes/font_size = 30
-text = "Poinst: 0"
-horizontal_alignment = 1
-vertical_alignment = 1
-
 [node name="CoinGroup" type="Node" parent="."]
 
 [node name="Moneda" parent="CoinGroup" instance=ExtResource("8_pu2ng")]
@@ -471,3 +451,6 @@ position = Vector2(717, 445)
 
 [node name="Moneda4" parent="CoinGroup" instance=ExtResource("8_pu2ng")]
 position = Vector2(817, 397)
+
+[node name="UI" parent="." instance=ExtResource("10_wi5j0")]
+unique_name_in_owner = true
