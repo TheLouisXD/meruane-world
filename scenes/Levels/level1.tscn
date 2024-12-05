@@ -266,3 +266,4 @@ position = Vector2(4921, 627)
 target_level = ExtResource("8_0s3ky")
 
 [node name="UI" parent="." instance=ExtResource("9_prdga")]
+unique_name_in_owner = true

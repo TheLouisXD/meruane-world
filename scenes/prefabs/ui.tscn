@@ -1,6 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://cqotvyxtwgx65"]
+[gd_scene load_steps=8 format=3 uid="uid://cqotvyxtwgx65"]
 
 [ext_resource type="Texture2D" uid="uid://v0nsyqc055y" path="res://assets/items/spritesheet.png" id="1_fncvv"]
+[ext_resource type="Script" path="res://scenes/prefabs/ui.gd" id="1_sxw12"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_sqcjv"]
 atlas = ExtResource("1_fncvv")
@@ -39,6 +40,7 @@ animations = [{
 }]
 
 [node name="UI" type="CanvasLayer"]
+script = ExtResource("1_sxw12")
 
 [node name="Panel" type="Panel" parent="."]
 offset_left = 19.0
