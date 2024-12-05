@@ -1,8 +1,52 @@
-[gd_scene load_steps=4 format=3 uid="uid://dm7llqpf0tqvi"]
+[gd_scene load_steps=11 format=3 uid="uid://dm7llqpf0tqvi"]
 
 [ext_resource type="Script" path="res://scripts/main_menu.gd" id="1_ay2vv"]
 [ext_resource type="Texture2D" uid="uid://cqeasmhl8jo62" path="res://assets/basura/photo-1478098711619-5ab0b478d6e6.jpg" id="1_spfyp"]
 [ext_resource type="Texture2D" uid="uid://c1kv3kr0mtpyy" path="res://assets/world/props/cooltext471087854192457.png" id="2_x11bo"]
+[ext_resource type="Texture2D" uid="uid://b2cl2vkl0t5lb" path="res://assets/world/props/logo.png" id="4_18c6d"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qplmu"]
+atlas = ExtResource("4_18c6d")
+region = Rect2(0, 0, 758, 105)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fvwgh"]
+atlas = ExtResource("4_18c6d")
+region = Rect2(758, 0, 758, 105)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yowij"]
+atlas = ExtResource("4_18c6d")
+region = Rect2(0, 105, 758, 105)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_86gvd"]
+atlas = ExtResource("4_18c6d")
+region = Rect2(758, 105, 758, 105)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dhe5a"]
+atlas = ExtResource("4_18c6d")
+region = Rect2(0, 210, 758, 105)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_s6one"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qplmu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fvwgh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yowij")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_86gvd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dhe5a")
+}],
+"loop": true,
+"name": &"default",
+"speed": 15.0
+}]
 
 [node name="MainMenu" type="Node"]
 script = ExtResource("1_ay2vv")
@@ -17,6 +61,7 @@ texture = ExtResource("1_spfyp")
 expand_mode = 1
 
 [node name="titulo" type="TextureRect" parent="."]
+visible = false
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -46,6 +91,12 @@ offset_right = 931.0
 offset_bottom = 532.0
 theme_override_font_sizes/font_size = 30
 text = "Nivel 2"
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(589, 324)
+scale = Vector2(1.12665, 1.35714)
+sprite_frames = SubResource("SpriteFrames_s6one")
+autoplay = "default"
 
 [connection signal="pressed" from="nivel1" to="." method="_on_nivel_1_pressed"]
 [connection signal="pressed" from="nivel2" to="." method="_on_nivel_2_pressed"]
