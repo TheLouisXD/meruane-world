@@ -41,8 +41,9 @@ animations = [{
 "speed": 7.0
 }]
 
-[node name="UI" type="CanvasLayer"]
+[node name="UI" type="CanvasLayer" node_paths=PackedStringArray("hearts")]
 script = ExtResource("1_sxw12")
+hearts = [NodePath("Panel2/HBoxContainer/TextureRect3"), NodePath("Panel2/HBoxContainer/TextureRect"), NodePath("Panel2/HBoxContainer/TextureRect2")]
 
 [node name="Panel" type="Panel" parent="."]
 offset_left = 19.0

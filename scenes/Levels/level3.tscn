@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=4 uid="uid://b0vhrb4h42nba"]
+[gd_scene load_steps=20 format=4 uid="uid://b0vhrb4h42nba"]
 
 [ext_resource type="Script" path="res://scripts/main.gd" id="1_cjq0l"]
 [ext_resource type="Script" path="res://scripts/game_manager.gd" id="2_lvykr"]
@@ -12,6 +12,7 @@
 [ext_resource type="Script" path="res://scripts/killzone.gd" id="10_q6ppi"]
 [ext_resource type="PackedScene" uid="uid://btt25r0j58n2x" path="res://scenes/prefabs/enemy.tscn" id="10_sonsh"]
 [ext_resource type="PackedScene" uid="uid://cqotvyxtwgx65" path="res://scenes/prefabs/ui.tscn" id="10_tfo5y"]
+[ext_resource type="PackedScene" uid="uid://hlbk7nyxjesd" path="res://scenes/prefabs/moneda.tscn" id="13_4n4yq"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_v0lpp"]
 texture = ExtResource("4_nlg3j")
@@ -475,6 +476,7 @@ script = ExtResource("2_lvykr")
 [node name="SceneObjects" type="Node" parent="."]
 
 [node name="TextureRect" type="TextureRect" parent="SceneObjects"]
+texture_filter = 1
 offset_left = -1356.0
 offset_top = -188.0
 offset_right = 1008.0
@@ -484,6 +486,7 @@ texture = ExtResource("4_83t4v")
 stretch_mode = 1
 
 [node name="decoracion" type="TileMapLayer" parent="SceneObjects"]
+texture_filter = 1
 scale = Vector2(3, 3)
 tile_map_data = PackedByteArray("AAAJAAwAAAADAAcAAAABAAwAAwAXAAcAABACAAwAAwAWAAcAABAUAAwAAAADAAcAAAA/AAsAAAABAAcAAABAAAsAAAABAAcAAABBAAsAAAABAAcAAABCAAsAAAABAAcAAABDAAsAAAABAAcAAABEAAsAAAABAAcAAAA+AAsAAAABAAcAAACwAA4AAAAJAAcAAACzABEAAAALAAcAAAC5AAwAAAABAAcAAAC7AAwAAAABAAcAAAC8AAwAAAABAAcAAACDAAwAAAADAAcAAACGAAwAAAADAAcAAABcAAsAAAADAAcAAABqAAsAAAADAAcAAAAOAAsAAwAPAAYAAAAOAAwAAwAPAAcAAAAPAAsAAwAQAAYAAAAPAAwAAwAQAAcAAAAQAAsAAwARAAYAAAAQAAwAAwARAAcAAAAjAAwAAwAQAAYAAAAiAAwAAwAPAAYAAAAkAAwAAwARAAYAAAAqAAsAAAAJAAcAAAAbAAsAAwAXAAkAAAAbAAwAAwAXAAoAAAAcAAsAAwAYAAkAAAAcAAwAAwAYAAoAAAA2AAwAAwAGAAcAAABgAAcAAwAHAAQAAABgAAgAAwAHAAUAAABhAAYAAwAIAAMAAABhAAcAAwAIAAQAAABhAAgAAwAIAAUAAABiAAUAAwAJAAIAAABiAAYAAwAJAAMAAABiAAcAAwAJAAQAAABiAAgAAwAJAAUAAABiAAkAAwAJAAYAAABiAAoAAwAJAAcAAABjAAUAAwAKAAIAAABjAAYAAwAKAAMAAABjAAcAAwAKAAQAAABjAAgAAwAKAAUAAABjAAkAAwAKAAYAAABjAAoAAwAKAAcAAABkAAUAAwALAAIAAABkAAYAAwALAAMAAABkAAcAAwALAAQAAABkAAgAAwALAAUAAABkAAkAAwALAAYAAABkAAoAAwALAAcAAABlAAUAAwAMAAIAAABlAAYAAwAMAAMAAABlAAcAAwAMAAQAAABlAAgAAwAMAAUAAABlAAoAAwAMAAcAAABmAAYAAwANAAMAAABmAAcAAwANAAQAAABmAAgAAwANAAUAAABnAAcAAwAOAAQAAAADAAYAAwAVAAEAABACAAYAAwAWAAEAABABAAYAAwAXAAEAABAEAAcAAwAUAAIAABADAAcAAwAVAAIAABACAAcAAwAWAAIAABABAAcAAwAXAAIAABAAAAcAAwAYAAIAABAEAAgAAwAUAAMAABADAAgAAwAVAAMAABACAAgAAwAWAAMAABABAAgAAwAXAAMAABAAAAgAAwAYAAMAABAFAAkAAwATAAQAABAEAAkAAwAUAAQAABADAAkAAwAVAAQAABACAAkAAwAWAAQAABABAAkAAwAXAAQAABAAAAkAAwAYAAQAABD//wkAAwAZAAQAABAEAAoAAwAUAAUAABADAAoAAwAVAAUAABACAAoAAwAWAAUAABABAAoAAwAXAAUAABAAAAoAAwAYAAUAABD//woAAwAZAAUAABAEAAsAAwAUAAYAABADAAsAAwAVAAYAABACAAsAAwAWAAYAABABAAsAAwAXAAYAABAAAAsAAwAYAAYAABD//wsAAwAZAAYAABAEAAwAAwAUAAcAABADAAwAAwAVAAcAABAAAAwAAwAYAAcAABD//wwAAwAZAAcAABA=")
 tile_set = SubResource("TileSet_bt4ql")
@@ -515,6 +518,12 @@ position = Vector2(1042, 594)
 [node name="enemy2" parent="SceneObjects/enemy group" instance=ExtResource("10_sonsh")]
 position = Vector2(2118, 594)
 
+[node name="enemy3" parent="SceneObjects/enemy group" instance=ExtResource("10_sonsh")]
+position = Vector2(5019, 498)
+
+[node name="enemy4" parent="SceneObjects/enemy group" instance=ExtResource("10_sonsh")]
+position = Vector2(3990, 594)
+
 [node name="killzone" type="Area2D" parent="SceneObjects"]
 script = ExtResource("10_q6ppi")
 
@@ -523,5 +532,40 @@ shape = SubResource("WorldBoundaryShape2D_i0gs2")
 
 [node name="UI" parent="." instance=ExtResource("10_tfo5y")]
 unique_name_in_owner = true
+
+[node name="monedas group" type="Node" parent="."]
+
+[node name="Moneda" parent="monedas group" instance=ExtResource("13_4n4yq")]
+position = Vector2(1427, 587)
+
+[node name="Moneda2" parent="monedas group" instance=ExtResource("13_4n4yq")]
+position = Vector2(1530, 586)
+
+[node name="Moneda3" parent="monedas group" instance=ExtResource("13_4n4yq")]
+position = Vector2(1619, 586)
+
+[node name="Moneda4" parent="monedas group" instance=ExtResource("13_4n4yq")]
+position = Vector2(2949, 538)
+
+[node name="Moneda5" parent="monedas group" instance=ExtResource("13_4n4yq")]
+position = Vector2(3050, 536)
+
+[node name="Moneda6" parent="monedas group" instance=ExtResource("13_4n4yq")]
+position = Vector2(3156, 536)
+
+[node name="Moneda7" parent="monedas group" instance=ExtResource("13_4n4yq")]
+position = Vector2(3269, 537)
+
+[node name="Moneda8" parent="monedas group" instance=ExtResource("13_4n4yq")]
+position = Vector2(3378, 536)
+
+[node name="Moneda" parent="." instance=ExtResource("13_4n4yq")]
+position = Vector2(5551, 589)
+
+[node name="Moneda2" parent="." instance=ExtResource("13_4n4yq")]
+position = Vector2(5657, 590)
+
+[node name="Moneda3" parent="." instance=ExtResource("13_4n4yq")]
+position = Vector2(5756, 591)
 
 [connection signal="body_entered" from="SceneObjects/killzone" to="SceneObjects/killzone" method="_on_body_entered"]
