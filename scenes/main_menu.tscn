@@ -1,7 +1,7 @@
 [gd_scene load_steps=11 format=3 uid="uid://dm7llqpf0tqvi"]
 
 [ext_resource type="Script" path="res://scripts/main_menu.gd" id="1_ay2vv"]
-[ext_resource type="Texture2D" uid="uid://cqeasmhl8jo62" path="res://assets/basura/photo-1478098711619-5ab0b478d6e6.jpg" id="1_spfyp"]
+[ext_resource type="Texture2D" uid="uid://wr8yfcfd7bbs" path="res://assets/Menu/meruane god of war.jpeg" id="2_8hkr5"]
 [ext_resource type="Texture2D" uid="uid://c1kv3kr0mtpyy" path="res://assets/world/props/cooltext471087854192457.png" id="2_x11bo"]
 [ext_resource type="Texture2D" uid="uid://b2cl2vkl0t5lb" path="res://assets/world/props/logo.png" id="4_18c6d"]
 
@@ -57,7 +57,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("1_spfyp")
+texture = ExtResource("2_8hkr5")
 expand_mode = 1
 
 [node name="titulo" type="TextureRect" parent="."]

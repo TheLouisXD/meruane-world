@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=4 uid="uid://b0vhrb4h42nba"]
+[gd_scene load_steps=19 format=4 uid="uid://b0vhrb4h42nba"]
 
 [ext_resource type="Script" path="res://scripts/main.gd" id="1_cjq0l"]
 [ext_resource type="Script" path="res://scripts/game_manager.gd" id="2_lvykr"]
@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://dxcmqh7m61v0g" path="res://assets/world/props/props.png" id="5_xgwel"]
 [ext_resource type="PackedScene" uid="uid://bnvp28pkn588p" path="res://scenes/prefabs/player.tscn" id="6_flp2r"]
 [ext_resource type="PackedScene" uid="uid://4m68ackvql0e" path="res://scenes/prefabs/trofeo.tscn" id="7_ofi2a"]
+[ext_resource type="PackedScene" uid="uid://dnfrbfjybvr3t" path="res://scenes/Levels/level2.tscn" id="9_35qeh"]
 [ext_resource type="Script" path="res://scripts/killzone.gd" id="10_q6ppi"]
 [ext_resource type="PackedScene" uid="uid://btt25r0j58n2x" path="res://scenes/prefabs/enemy.tscn" id="10_sonsh"]
 [ext_resource type="PackedScene" uid="uid://cqotvyxtwgx65" path="res://scenes/prefabs/ui.tscn" id="10_tfo5y"]
@@ -504,6 +505,7 @@ position_smoothing_speed = 15.0
 
 [node name="trofeo" parent="SceneObjects" instance=ExtResource("7_ofi2a")]
 position = Vector2(11045, 579)
+target_level = ExtResource("9_35qeh")
 
 [node name="enemy group" type="Node" parent="SceneObjects"]
 
