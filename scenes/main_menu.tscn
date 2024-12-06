@@ -1,9 +1,10 @@
-[gd_scene load_steps=11 format=3 uid="uid://dm7llqpf0tqvi"]
+[gd_scene load_steps=12 format=3 uid="uid://dm7llqpf0tqvi"]
 
 [ext_resource type="Script" path="res://scripts/main_menu.gd" id="1_ay2vv"]
 [ext_resource type="Texture2D" uid="uid://wr8yfcfd7bbs" path="res://assets/Menu/meruane god of war.jpeg" id="2_8hkr5"]
 [ext_resource type="Texture2D" uid="uid://c1kv3kr0mtpyy" path="res://assets/world/props/cooltext471087854192457.png" id="2_x11bo"]
 [ext_resource type="Texture2D" uid="uid://b2cl2vkl0t5lb" path="res://assets/world/props/logo.png" id="4_18c6d"]
+[ext_resource type="AudioStream" uid="uid://cnj4vefbgdy3x" path="res://assets/Musica/tio aceite.mp3" id="5_gvf1u"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qplmu"]
 atlas = ExtResource("4_18c6d")
@@ -77,18 +78,18 @@ texture = ExtResource("2_x11bo")
 expand_mode = 1
 
 [node name="nivel1" type="Button" parent="."]
-offset_left = 197.0
-offset_top = 464.0
-offset_right = 457.0
-offset_bottom = 532.0
+offset_left = 237.0
+offset_top = 462.0
+offset_right = 497.0
+offset_bottom = 530.0
 theme_override_font_sizes/font_size = 30
 text = "Nivel 1"
 
 [node name="nivel2" type="Button" parent="."]
-offset_left = 671.0
-offset_top = 464.0
-offset_right = 931.0
-offset_bottom = 532.0
+offset_left = 665.0
+offset_top = 462.0
+offset_right = 925.0
+offset_bottom = 530.0
 theme_override_font_sizes/font_size = 30
 text = "Nivel 2"
 
@@ -97,6 +98,11 @@ position = Vector2(589, 324)
 scale = Vector2(1.12665, 1.35714)
 sprite_frames = SubResource("SpriteFrames_s6one")
 autoplay = "default"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_gvf1u")
+volume_db = -4.952
+autoplay = true
 
 [connection signal="pressed" from="nivel1" to="." method="_on_nivel_1_pressed"]
 [connection signal="pressed" from="nivel2" to="." method="_on_nivel_2_pressed"]

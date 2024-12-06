@@ -43,7 +43,7 @@ func _physics_process(delta: float) -> void:
 	var direction := Input.get_axis("left", "right")
 	if direction:
 		if Input.is_action_pressed("run"):
-			velocity.x = direction * (SPEED + 300)
+			velocity.x = direction * (SPEED + 200)
 		else:
 			velocity.x = direction * SPEED
 	else:

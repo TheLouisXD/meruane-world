@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=4 uid="uid://dnfrbfjybvr3t"]
+[gd_scene load_steps=31 format=4 uid="uid://dnfrbfjybvr3t"]
 
 [ext_resource type="Script" path="res://scripts/main.gd" id="1_c3yu7"]
 [ext_resource type="Script" path="res://scripts/game_manager.gd" id="2_v7v1t"]
@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://dm7llqpf0tqvi" path="res://scenes/main_menu.tscn" id="8_7idue"]
 [ext_resource type="PackedScene" uid="uid://hlbk7nyxjesd" path="res://scenes/prefabs/moneda.tscn" id="8_pu2ng"]
 [ext_resource type="PackedScene" uid="uid://cqotvyxtwgx65" path="res://scenes/prefabs/ui.tscn" id="10_wi5j0"]
+[ext_resource type="AudioStream" uid="uid://bcsqc68qvavrh" path="res://assets/Musica/contrareloj.mp3" id="11_0fv7x"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0s0el"]
 texture = ExtResource("4_uwxrs")
@@ -454,3 +455,8 @@ position = Vector2(817, 397)
 
 [node name="UI" parent="." instance=ExtResource("10_wi5j0")]
 unique_name_in_owner = true
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("11_0fv7x")
+autoplay = true
+max_distance = 2e+09
